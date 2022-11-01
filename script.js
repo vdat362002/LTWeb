@@ -30,6 +30,8 @@ imgNbLi.forEach(function(image,index) {
         document.querySelector(".slider-content-left-top").style.right = index  *100 + "%"
         image.classList.add("active")
         temp = index
+        clearInterval(auto)
+        auto = setInterval(imgAuto, 3000)
     })
 })
 
@@ -46,12 +48,6 @@ function imgAuto () {
     removeactive()
     document.querySelector(".slider-content-left-top").style.right = temp  *100 + "%"
     imgNbLi[temp].classList.add("active")
-    if(imgNbLi.forEach(function(image,index) {
-        image.addEventListener('click', function(){
-        })
-    })){
-        clearInterval(imgAuto)
-    }
 }
 
-setInterval(imgAuto,3000)
+var auto = setInterval(imgAuto,3000)
