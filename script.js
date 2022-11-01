@@ -11,6 +11,8 @@ rightbtn.addEventListener('click', function() {
         temp = 0
     }
     imgNbLi[temp].classList.add("active")
+    clearInterval(auto)
+        auto = setInterval(imgAuto, 3000)
     document.querySelector(".slider-content-left-top").style.right = temp  *100 + "%"
 })
 
@@ -21,6 +23,8 @@ leftbtn.addEventListener('click', function() {
         temp = imgNb.length - 1 
     }
     imgNbLi[temp].classList.add("active")
+    clearInterval(auto)
+        auto = setInterval(imgAuto, 3000)
     document.querySelector(".slider-content-left-top").style.right = temp  *100 + "%"
 })
 
